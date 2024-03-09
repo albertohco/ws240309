@@ -17,9 +17,7 @@
           main()
        ```
 
-    2. Escrever o readme ensinando como instalar
-
-    3. Criar um arquivo Dockerfile
+    2. Criar um arquivo Dockerfile
 
        ```Dockerfile
        # Use uma imagem base do Python
@@ -36,7 +34,7 @@
        ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
        ```
 
-    4. Rodar local
+    3. Rodar local no terminal
 
        ```bash
        docker build -t imagem-teste
@@ -45,6 +43,10 @@
        ```bash
        docker run -d -p 8501:8501 --name container-teste imagem-teste
        ```
+
+    4. testar o ambiente:
+
+       abrir o app no endereço (http://localhost:8501)
 
 2.  subir o docker compose usando (Postgres + PgAdmin )
 
