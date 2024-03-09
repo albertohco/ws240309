@@ -113,13 +113,16 @@
     ```bash
     version: "3"
     services:
-    teste-postgres-compose:
-    image: postgres
-    environment:
-    POSTGRES_PASSWORD: "local"
-    ports: - "15432:5432"
-    volumes: - postgres_data:/var/lib/postgresql/data
-    networks: - postgres-compose-network
+        teste-postgres-compose:
+            image: postgres
+            environment:
+                POSTGRES_PASSWORD: "local"
+            ports:
+                - "15432:5432"
+            volumes:
+                - postgres_data:/var/lib/postgresql/data
+            networks:
+                - postgres-compose-network
 
          teste-pgadmin-compose:
              image: dpage/pgadmin4
