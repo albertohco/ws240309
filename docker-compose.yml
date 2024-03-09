@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+  teste-postgres-compose:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "local"
+    ports:
+      - "15432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - postgres-compose-network
+
+  teste-pgadmin-compose:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "local@teste.com"
+      PGADMIN_DEFAULT_PASSWORD: "local"
+    ports:
+      - "16543:80"
+    depends_on:
+      - teste-postgres-compose
+    networks:
+      - postgres-compose-network
+
+  python_app:
+    build:
+      context: .
+    container_name: python_app_container
+    ports:
+      - "8501:8501"
+    depends_on:
+      - teste-postgres-compose
+    networks:
+      - postgres-compose-network
+
+networks:
+  postgres-compose-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
