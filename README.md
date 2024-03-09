@@ -110,9 +110,8 @@
 
     1. Criar um arquivo chamado docker-compose.yml
 
-    ´´´ bash
+    ```bash
     version: "3"
-
     services:
     teste-postgres-compose:
     image: postgres
@@ -152,13 +151,13 @@
     volumes:
     postgres_data:
 
-    ````
+    ```
 
     2. Rodar os comandos no terminal
 
-      ```bash
+    ```bash
       docker-compose up -d
-    ````
+    ```
 
     ```bash
     docker network ls
