@@ -4,6 +4,19 @@
 
     1. Fazer o projeto app.py
 
+       ```python
+       import streamlit as st
+
+       def hello_world():
+          return "Hello, World! Show de Bola"
+
+       def main():
+          st.write(hello_world())
+
+       if __name__ == "__main__":
+          main()
+       ```
+
     2. Escrever o readme ensinando como instalar
 
     3. Criar um arquivo Dockerfile
