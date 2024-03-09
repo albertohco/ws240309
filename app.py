@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def hello_world():
-    return "Hello, World!"
+    return "Hello, World! Show de Bola"
 
 
 def main():
