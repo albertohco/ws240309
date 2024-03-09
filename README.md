@@ -1,5 +1,7 @@
 # Workshop Lucianao Galvão 09/03/2024
 
+![Imagem](./pics/arquitetura.png)
+
 1.  subir o docker com o python Hello Word!!
 
     1. Fazer o projeto app.py
